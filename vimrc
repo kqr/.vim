@@ -12,9 +12,6 @@ set bs=indent,eol,start        " backspace plows through everything
 " smart indent fraks python comments up, no more!
 inoremap # X#
 
-" close buffers quickleh
-map <F10> :bd!<CR>
-
 au BufRead,BufNewFile *.txt   setfiletype text
 au BufRead,BufNewFile *.md    setfiletype text
 au BufRead,BufNewFile *.latex setfiletype text
