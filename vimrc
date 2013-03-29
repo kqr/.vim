@@ -12,11 +12,11 @@ set bs=indent,eol,start        " backspace plows through everything
 " smart indent fraks python comments up, no more!
 inoremap # X#
 
-au BufRead,BufNewFile *.txt   setfiletype text
-au BufRead,BufNewFile *.md    setfiletype text
-au BufRead,BufNewFile *.latex setfiletype text
-au BufRead,BufNewFile *.tex   setfiletype text
 filetype plugin indent on      " Vary editing behaviour based on file type
+au BufRead,BufNewFile *.txt   set filetype=text
+au BufRead,BufNewFile *.md    set filetype=text
+au BufRead,BufNewFile *.latex set filetype=text
+au BufRead,BufNewFile *.tex   set filetype=text
 
 " -----------------------------------------
 " From Shai's Colemak.vim:

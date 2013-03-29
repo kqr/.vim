@@ -15,3 +15,4 @@ set formatoptions=tla      " automatically wrap when editing too
 set nonumber               " don't show line numbers!
 set nocursorline           " don't highlight the current line
 set foldcolumn=6           " have a left gutter
+syntax off                 " no syntax highlighting
