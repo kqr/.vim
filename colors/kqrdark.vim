@@ -23,7 +23,7 @@ hi DiffChange   ctermfg=NONE ctermbg=NONE
 hi DiffDelete   ctermfg=NONE ctermbg=NONE
 hi DiffText     ctermfg=NONE ctermbg=NONE
 hi ErrorMsg     ctermfg=9    ctermbg=NONE
-hi MatchParen   ctermfg=0 ctermbg=153
+hi MatchParen   ctermfg=215  ctermbg=NONE cterm=underline
 hi ModeMsg      ctermfg=243  ctermbg=235
 hi MoreMsg      ctermfg=243  ctermbg=235
 hi NonText      ctermfg=243  ctermbg=NONE
