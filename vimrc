@@ -14,7 +14,6 @@ inoremap # X#
 
 filetype plugin indent on      " Vary editing behaviour based on file type
 au BufRead,BufNewFile *.txt   set filetype=text
-au BufRead,BufNewFile *.md    set filetype=text
 au BufRead,BufNewFile *.latex set filetype=text
 au BufRead,BufNewFile *.tex   set filetype=text
 

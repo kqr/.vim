@@ -68,3 +68,33 @@ hi Underlined   ctermfg=NONE ctermbg=NONE
 hi VisualNOS    ctermfg=NONE ctermbg=NONE
 hi WildMenu     ctermfg=NONE ctermbg=NONE
 
+" Markdown colours
+hi markdownH1                 ctermfg=NONE ctermbg=NONE
+hi markdownH2                 ctermfg=NONE ctermbg=NONE
+hi markdownH3                 ctermfg=NONE ctermbg=NONE
+hi markdownH4                 ctermfg=NONE ctermbg=NONE
+hi markdownH5                 ctermfg=NONE ctermbg=NONE
+hi markdownH6                 ctermfg=NONE ctermbg=NONE
+hi markdownHeadingRule        ctermfg=208  ctermbg=NONE
+hi markdownHeadingDelimiter   ctermfg=208  ctermbg=NONE
+hi markdownOrderedListMarker  ctermfg=208  ctermbg=NONE
+hi markdownListMarker         ctermfg=208  ctermbg=NONE
+hi markdownBlockquote         ctermfg=208  ctermbg=NONE
+hi markdownRule               ctermfg=208  ctermbg=NONE
+
+hi markdownLinkText           ctermfg=31   ctermbg=NONE term=underline
+hi markdownIdDeclaration      ctermfg=NONE ctermbg=NONE
+hi markdownId                 ctermfg=NONE ctermbg=NONE
+hi markdownAutomaticLink      ctermfg=31   ctermbg=NONE term=underline
+hi markdownUrl                ctermfg=NONE ctermbg=NONE
+hi markdownUrlTitle           ctermfg=NONE ctermbg=NONE
+hi markdownIdDelimiter        ctermfg=NONE ctermbg=NONE
+hi markdownUrlDelimiter       ctermfg=NONE ctermbg=NONE
+hi markdownUrlTitleDelimiter  ctermfg=NONE ctermbg=NONE
+
+hi markdownItalic             ctermfg=NONE ctermbg=NONE term=NONE
+hi markdownBold               ctermfg=NONE ctermbg=NONE term=NONE
+hi markdownBoldItalic         ctermfg=NONE ctermbg=NONE term=NONE
+hi markdownCodeDelimiter      ctermfg=NONE ctermbg=NONE term=NONE
+
+
