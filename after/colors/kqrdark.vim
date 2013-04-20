@@ -97,4 +97,6 @@ hi markdownBold               ctermfg=NONE ctermbg=NONE term=NONE
 hi markdownBoldItalic         ctermfg=NONE ctermbg=NONE term=NONE
 hi markdownCodeDelimiter      ctermfg=NONE ctermbg=NONE term=NONE
 
+hi markdownEscape             ctermfg=106  ctermbg=NONE term=NONE
+hi markdownError              ctermfg=NONE ctermbg=NONE term=NONE
 
