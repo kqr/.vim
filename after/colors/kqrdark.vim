@@ -33,6 +33,10 @@ hi VertSplit    ctermfg=254  ctermbg=243
 hi LineNr       ctermfg=243  ctermbg=235
 hi FoldColumn   ctermfg=243  ctermbg=none
 
+" EasyMotion colours:
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
+
 " Syntax colours:
 hi Boolean      ctermfg=NONE ctermbg=NONE
 hi Character    ctermfg=NONE ctermbg=NONE

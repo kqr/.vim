@@ -85,5 +85,8 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_max_files = 200
 let g:ctrlp_max_depth = 10
 
+" EasyMotion
+Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
+
 " Double tap to cancel comment on new line
 Bundle 'git://github.com/Osse/double-tap.git'
