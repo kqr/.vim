@@ -3,7 +3,7 @@
 " ~~~ EDITING BEHAVIOUR ~~~
 
 " toggle between auto wrapping and no auto wrapping
-nnoremap <F2> :call ToggleAutoWrapping()<CR>{j
+nnoremap <F2> :call ToggleAutoWrapping()<CR>
 function ToggleAutoWrapping()
     if &fo =~ 't' && &fo =~ 'a'
         setlocal fo-=t fo-=a
@@ -23,6 +23,7 @@ map <F3> :w !wc -w<CR>
 
 " ~~~ GRAPHICS ~~~
 
+set nosmartindent          " smart indent fucks up for,while,if,do etc
 let g:loaded_matchparen=1  " no parentheses highlighting
 set tw=79                  " hard wrap lines longer than 79 characters
 set nonumber               " don't show line numbers!
