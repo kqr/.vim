@@ -71,7 +71,7 @@ set noswapfile             " don't create the swap files
 
 
 " ~~~ VUNDLE STUFF ~~~
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'git://github.com/gmarik/vundle.git'
