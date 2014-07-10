@@ -4,17 +4,6 @@
 
 " toggle between auto wrapping and no auto wrapping
 nnoremap <F2> :call ToggleAutoWrapping()<CR>
-function ToggleAutoWrapping()
-    if &fo =~ 't' && &fo =~ 'a'
-        setlocal fo-=t fo-=a
-        setlocal syntax=on
-        syntax enable
-    else
-        setlocal fo+=t fo+=a
-        setlocal syntax=off
-        normal gqap
-    endif
-endfunction
 
 
 " count words quickleh

@@ -1,6 +1,20 @@
 
 " ~~~ EDITING BEHAVIOUR ~~~
 
+" toggle between auto wrapping and no auto wrapping
+function ToggleAutoWrapping()
+    if &fo =~ 't' && &fo =~ 'a'
+        setlocal fo-=t fo-=a
+        setlocal syntax=on
+        syntax enable
+    else
+        setlocal fo+=t fo+=a
+        setlocal syntax=off
+        normal gqap
+    endif
+endfunction
+
+
 set nocompatible               " start in vim mode
 set encoding=utf-8             " because we're international
 set autoindent                 " precisely.
@@ -14,7 +28,7 @@ inoremap # X#
 
 filetype plugin indent on      " Vary editing behaviour based on file type
 au BufRead,BufNewFile *.txt   set filetype=text
-au BufRead,BufNewFile *.latex set filetype=text
+au BufRead,BufNewFile *.latex   set filetype=text
 au BufRead,BufNewFile *.tex   set filetype=text
 
 " -----------------------------------------
@@ -61,8 +75,7 @@ set incsearch              " jump to first search result automagically
 
 set nowrap                 " don't soft wrap lines
 " characters to show that the line extends beyond the borders of the window
-set list listchars=precedes:<,extends:>
-
+set list listchars=precedes:<,extends:>,tab:›\ 
 
 " ~~~ SAVING FILES ~~~
 
@@ -87,6 +100,13 @@ let g:ctrlp_max_depth = 10
 
 " EasyMotion
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
+let g:EasyMotion_leader_key = '<Leader>'
 
 " Double tap to cancel comment on new line
 Bundle 'git://github.com/Osse/double-tap.git'
+
+" hdevtools-vim
+Bundle 'git://github.com/bitc/vim-hdevtools.git'
+
+
+

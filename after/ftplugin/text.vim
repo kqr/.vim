@@ -5,6 +5,10 @@
 " count words quickleh
 map <F3> :w !wc -w<CR>
 
+" toggle between auto wrapping and no auto wrapping
+nnoremap <F2> :call ToggleAutoWrapping()<CR>
+
+
 
 " ~~~ GRAPHICS ~~~
 
@@ -18,3 +22,4 @@ set nonumber               " don't show line numbers!
 set nocursorline           " don't highlight the current line
 set foldcolumn=6           " have a left gutter
 syntax off                 " no syntax highlighting
+
