@@ -1,35 +1,48 @@
 
 " ~~~ EDITING BEHAVIOUR ~~~
 
-" toggle between auto wrapping and no auto wrapping
-function ToggleAutoWrapping()
-    if &fo =~ 't' && &fo =~ 'a'
-        setlocal fo-=t fo-=a
-        setlocal syntax=on
-        syntax enable
-    else
-        setlocal fo+=t fo+=a
-        setlocal syntax=off
-        normal gqap
-    endif
-endfunction
-
-
 set nocompatible               " start in vim mode
 set encoding=utf-8             " because we're international
 set autoindent                 " precisely.
 set si                         " smart indent. is it good? is it bad? i don't know
 set nostartofline              " try to keep the column while jumping
-set tabstop=4 shiftwidth=4     " tabs are four spaces wide
+set tabstop=4 shiftwidth=4     " tabs are two spaces wide
 set expandtab                  " and made of spaces
 set bs=indent,eol,start        " backspace plows through everything
 " smart indent fraks python comments up, no more!
 inoremap # X#
 
+
+set foldmethod=indent
+" All folds OPEN by default
+autocmd BufWinEnter * silent! :%foldopen!
+
+" ~~~ PLUGINS ~~~
+
+filetype off                   " required for vundle?
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+    Plugin 'gmarik/Vundle.vim'
+
+    " File open thingey:
+    Plugin 'git://github.com/kien/ctrlp.vim.git'
+    let g:ctrlp_cmd = 'CtrlPMixed'
+    let g:ctrlp_by_filename = 1
+    let g:ctrlp_match_window_bottom = 0
+    let g:ctrlp_match_window_reversed = 0
+    let g:ctrlp_max_files = 200
+    let g:ctrlp_max_depth = 10
+
+    " EasyMotion
+    Plugin 'git://github.com/Lokaltog/vim-easymotion.git'
+    let g:EasyMotion_leader_key = '<Leader>'
+
+    " Double tap to cancel comment on new line
+    Plugin 'git://github.com/Osse/double-tap.git'
+
+call vundle#end()
+
 filetype plugin indent on      " Vary editing behaviour based on file type
-au BufRead,BufNewFile *.txt   set filetype=text
-au BufRead,BufNewFile *.latex   set filetype=text
-au BufRead,BufNewFile *.tex   set filetype=text
 
 " -----------------------------------------
 " From Shai's Colemak.vim:
@@ -82,31 +95,6 @@ set list listchars=precedes:<,extends:>,tab:›\
 set nobackup               " don't create backup files
 set noswapfile             " don't create the swap files
 
-
-" ~~~ VUNDLE STUFF ~~~
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
-Bundle 'git://github.com/gmarik/vundle.git'
-
-" File open thingey:
-Bundle 'git://github.com/kien/ctrlp.vim.git'
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_by_filename = 1
-let g:ctrlp_match_window_bottom = 0
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_max_files = 200
-let g:ctrlp_max_depth = 10
-
-" EasyMotion
-Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
-let g:EasyMotion_leader_key = '<Leader>'
-
-" Double tap to cancel comment on new line
-Bundle 'git://github.com/Osse/double-tap.git'
-
-" hdevtools-vim
-Bundle 'git://github.com/bitc/vim-hdevtools.git'
 
 
 

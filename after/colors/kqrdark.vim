@@ -31,7 +31,8 @@ hi Question     ctermfg=NONE ctermbg=NONE
 hi Title        ctermfg=NONE ctermbg=NONE
 hi VertSplit    ctermfg=254  ctermbg=243
 hi LineNr       ctermfg=243  ctermbg=235
-hi FoldColumn   ctermfg=243  ctermbg=none
+hi FoldColumn   ctermfg=NONE ctermbg=235
+hi Folded       ctermfg=243  ctermbg=235
 
 " EasyMotion colours:
 hi link EasyMotionTarget ErrorMsg
