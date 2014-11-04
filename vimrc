@@ -40,6 +40,10 @@ call vundle#begin()
     " Double tap to cancel comment on new line
     Plugin 'git://github.com/Osse/double-tap.git'
 
+    " surround.vim
+    Plugin 'https://github.com/tpope/vim-surround.git'
+    let g:surround_116 = "{% trans \"\r\" %}"
+
 call vundle#end()
 
 filetype plugin indent on      " Vary editing behaviour based on file type
