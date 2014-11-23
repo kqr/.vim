@@ -30,6 +30,7 @@ filetype plugin indent on      " Vary editing behaviour based on file type
 au BufRead,BufNewFile *.txt   set filetype=text
 au BufRead,BufNewFile *.latex   set filetype=text
 au BufRead,BufNewFile *.tex   set filetype=text
+au BufRead,BufNewFile *.clj set filetype=clojure
 
 " -----------------------------------------
 " From Shai's Colemak.vim:
@@ -108,5 +109,13 @@ Bundle 'git://github.com/Osse/double-tap.git'
 " hdevtools-vim
 Bundle 'git://github.com/bitc/vim-hdevtools.git'
 
+" vim-clojure-static
+Bundle 'https://github.com/guns/vim-clojure-static.git'
+
+" vim-fireplace
+Bundle 'https://github.com/tpope/vim-fireplace.git'
+
+" vim-surround
+Bundle 'https://github.com/tpope/vim-surround.git'
 
 
