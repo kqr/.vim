@@ -1,4 +1,3 @@
-
 " ~~~ EDITING BEHAVIOUR ~~~
 
 set nocompatible               " start in vim mode
@@ -12,6 +11,7 @@ set bs=indent,eol,start        " backspace plows through everything
 " smart indent fraks python comments up, no more!
 inoremap # X#
 
+set scrolloff=999
 
 set foldmethod=indent
 " All folds OPEN by default
@@ -77,6 +77,8 @@ set cursorline             " highlight the current line
 " don't display tilde characters -- dangerous, doesn't display ANY nontext!!
 hi NonText ctermbg=none ctermfg=234
 
+let &colorcolumn=join(range(81,999), ",")
+
 
 " ~~~ SEARCHING ~~~
 
@@ -96,5 +98,3 @@ set list listchars=precedes:<,extends:>,tab:›\
 
 set nobackup               " don't create backup files
 set noswapfile             " don't create the swap files
-
-
