@@ -1,13 +1,13 @@
 " ~~~ EDITING BEHAVIOUR ~~~
 
-set nocompatible               " start in vim mode
-set encoding=utf-8             " because we're international
-set autoindent                 " precisely.
-set si                         " smart indent. is it good? is it bad? i don't know
-set nostartofline              " try to keep the column while jumping
-set tabstop=2 shiftwidth=2     " tabs are two spaces wide
-set expandtab                  " and made of spaces
-set bs=indent,eol,start        " backspace plows through everything
+set nocompatible            " start in vim mode
+set encoding=utf-8          " because we're international
+set autoindent              " precisely.
+set si                      " smart indent. is it good? is it bad? i don't know
+set nostartofline           " try to keep the column while jumping
+set tabstop=2 shiftwidth=2  " tabs are two spaces wide
+set expandtab               " and made of spaces
+set bs=indent,eol,start     " backspace plows through everything
 " smart indent fraks python comments up, no more!
 inoremap # X#
 
