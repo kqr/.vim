@@ -26,12 +26,12 @@ call vundle#begin()
 
     " File open thingey:
     Plugin 'git://github.com/kien/ctrlp.vim.git'
-    let g:ctrlp_cmd = 'CtrlPMixed'
-    let g:ctrlp_by_filename = 1
+    let g:ctrlp_cmd = 'CtrlPRoot'
+    let g:ctrlp_by_filename = 0
     let g:ctrlp_match_window_bottom = 0
     let g:ctrlp_match_window_reversed = 0
-    let g:ctrlp_max_files = 200
-    let g:ctrlp_max_depth = 10
+    let g:ctrlp_max_files = 0
+    let g:ctrlp_max_depth = 15
 
     " EasyMotion
     Plugin 'git://github.com/Lokaltog/vim-easymotion.git'
