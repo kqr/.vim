@@ -26,6 +26,7 @@ call vundle#begin()
 
     " File open thingey:
     Plugin 'git://github.com/kien/ctrlp.vim.git'
+    let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .DS_Store --ignore **/*.pyc -g ""'
     let g:ctrlp_cmd = 'CtrlPRoot'
     let g:ctrlp_by_filename = 0
     let g:ctrlp_match_window_bottom = 0
