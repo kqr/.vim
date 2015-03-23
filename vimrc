@@ -25,6 +25,7 @@ call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
 
     " File open thingey:
+    " depends on ag for indexing files (fast as all heck!)
     Plugin 'git://github.com/kien/ctrlp.vim.git'
     let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .DS_Store --ignore **/*.pyc -g ""'
     let g:ctrlp_cmd = 'CtrlPRoot'
