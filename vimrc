@@ -45,6 +45,10 @@ call vundle#begin()
     Plugin 'https://github.com/tpope/vim-surround.git'
     let g:surround_116 = "{% trans \"\r\" %}"
 
+    " gutentags keeps the ctags of a gitted project updated
+    " requires ctags installed to work!
+    Plugin 'https://github.com/ludovicchabant/vim-gutentags'
+
 call vundle#end()
 
 filetype plugin indent on      " Vary editing behaviour based on file type
