@@ -48,6 +48,7 @@ call vundle#begin()
     " gutentags keeps the ctags of a gitted project updated
     " requires ctags installed to work!
     Plugin 'https://github.com/ludovicchabant/vim-gutentags'
+    let g:gutentags_tagfile = ".tags"
 
 call vundle#end()
 
