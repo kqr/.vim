@@ -64,6 +64,10 @@ inoremap <S-Tab> <Tab>|
 nnoremap <S-Enter> O<Esc>j
 nnoremap <CR> o<Esc>k
 
+" Set leader key to space which is far easier to reach
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+
 
 " ~~~ GRAPHICS ~~~
 
