@@ -25,13 +25,15 @@ call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
 
     " File open thingey:
+    " depends on ag for indexing files (fast as all heck!)
     Plugin 'git://github.com/kien/ctrlp.vim.git'
-    let g:ctrlp_cmd = 'CtrlPMixed'
-    let g:ctrlp_by_filename = 1
+    let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .DS_Store --ignore **/*.pyc -g ""'
+    let g:ctrlp_cmd = 'CtrlPRoot'
+    let g:ctrlp_by_filename = 0
     let g:ctrlp_match_window_bottom = 0
     let g:ctrlp_match_window_reversed = 0
-    let g:ctrlp_max_files = 200
-    let g:ctrlp_max_depth = 10
+    let g:ctrlp_max_files = 0
+    let g:ctrlp_max_depth = 15
 
     " EasyMotion
     Plugin 'git://github.com/Lokaltog/vim-easymotion.git'
@@ -43,6 +45,11 @@ call vundle#begin()
     " surround.vim
     Plugin 'https://github.com/tpope/vim-surround.git'
     let g:surround_116 = "{% trans \"\r\" %}"
+
+    " gutentags keeps the ctags of a gitted project updated
+    " requires ctags installed to work!
+    Plugin 'https://github.com/ludovicchabant/vim-gutentags'
+    let g:gutentags_tagfile = ".tags"
 
 call vundle#end()
 
@@ -63,6 +70,10 @@ inoremap <S-Tab> <Tab>|
 " Remap return to insert a new line after the current one
 nnoremap <S-Enter> O<Esc>j
 nnoremap <CR> o<Esc>k
+
+" Set leader key to space which is far easier to reach
+let mapleader=" "
+nnoremap <SPACE> <Nop>
 
 
 " ~~~ GRAPHICS ~~~
