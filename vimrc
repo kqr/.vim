@@ -51,6 +51,13 @@ call vundle#begin()
     Plugin 'https://github.com/ludovicchabant/vim-gutentags'
     let g:gutentags_tagfile = ".tags"
 
+    " Lets you define your own text objects; dependency of
+    " django-template-textobjects
+    Plugin 'https://github.com/kana/vim-textobj-user'
+
+    " Adds text objects for django templates!
+    Plugin 'https://github.com/mjbrownie/django-template-textobjects'
+
 call vundle#end()
 
 filetype plugin indent on      " Vary editing behaviour based on file type
