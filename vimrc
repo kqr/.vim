@@ -11,6 +11,7 @@ set bs=indent,eol,start     " backspace plows through everything
 " smart indent fraks python comments up, no more!
 inoremap # X#
 
+
 set scrolloff=999
 
 set foldmethod=indent
@@ -66,6 +67,9 @@ au BufRead,BufNewFile *.clj set filetype=clojure
 " shave off a few keystrokes of every vim command
 nnoremap ; :
 "
+" convenient escape in insert mode
+inoremap jj <Esc>
+"
 " remapping tab to escape and shift tab to tab
 nnoremap <silent> <Tab> :nohlsearch<CR>|
 vnoremap <Tab> <Esc><Nul>| " <Nul> added to fix select mode problem
@@ -77,7 +81,7 @@ inoremap <S-Tab> <Tab>|
 " Remap return to insert a new line after the current one
 nnoremap <S-Enter> O<Esc>j
 nnoremap <CR> o<Esc>k
-
+"
 " Set leader key to space which is far easier to reach
 let mapleader=" "
 nnoremap <SPACE> <Nop>
@@ -116,3 +120,8 @@ set list listchars=precedes:<,extends:>,tab:›\
 
 set nobackup               " don't create backup files
 set noswapfile             " don't create the swap files
+
+if isdirectory("xcalibur")
+  autocmd BufWritePost *.less :silent !touch `find xcalibur -name "bootstrap.less" | head -1`
+endif
+
