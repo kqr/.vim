@@ -59,6 +59,14 @@ call vundle#begin()
     " Adds text objects for django templates!
     Plugin 'https://github.com/mjbrownie/django-template-textobjects'
 
+    Plugin 'https://github.com/bkad/CamelCaseMotion'
+    noremap W w
+    noremap iW iw
+    map w <Plug>CamelCaseMotion_w
+    map e <Plug>CamelCaseMotion_w
+    map b <Plug>CamelCaseMotion_w
+    map iw <Plug>CamelCaseMotion_iw
+
 call vundle#end()
 
 filetype plugin indent on      " Vary editing behaviour based on file type
